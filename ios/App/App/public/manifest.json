@@ -1,0 +1,33 @@
+{
+  "id": "/",
+  "name": "Party Box - Neon Arcade & Parti Oyunları",
+  "short_name": "Party Box",
+  "description": "Arkadaşlarla parti oyunları, VIP kulübü, 1v1 düellolar, çark ve ortak kura merkezi.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0e17",
+  "theme_color": "#bef264",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    {
+      "src": "/assets/icons/app-logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/logo-google-play.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/icons/logo-app-store.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

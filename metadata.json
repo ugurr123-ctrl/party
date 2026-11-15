@@ -1,0 +1,7 @@
+{
+  "name": "Parti Kutusu - Neon Arcade & Parti Planlayıcı",
+  "description": "Arkadaşlarla parti oyunları (Parmak Seçimi, Karar Çarkı, Casus Kim, 5 Saniye, Takım Kura) ve ortak etkinlik planlama merkezi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

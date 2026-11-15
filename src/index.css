@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.pl-safe {
+  padding-left: env(safe-area-inset-left, 0px);
+}
+.pr-safe {
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* Neon Glow & Arcade utilities */
+.glow-lime {
+  box-shadow: 0 0 25px rgba(190, 242, 100, 0.45);
+}
+.glow-pink {
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.45);
+}
+.glow-cyan {
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.45);
+}
+.glow-amber {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.45);
+}
+.text-glow-lime {
+  text-shadow: 0 0 12px rgba(190, 242, 100, 0.7);
+}
+.text-glow-pink {
+  text-shadow: 0 0 12px rgba(236, 72, 153, 0.7);
+}
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(6, 182, 212, 0.7);
+}
+
+/* Background Grid Pattern */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Kayan Alt Dock blur */
+.dock-container {
+  background: rgba(17, 24, 39, 0.88);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.pill-indicator {
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Hide all scrollbars globally while preserving smooth scrolling */
+*::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+*,
+html,
+body {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* Finger Touch Effect Keyframe Animations */
+@keyframes touch-ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.0);
+    opacity: 0;
+  }
+}
+
+@keyframes touch-ripple-fast {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+@keyframes touch-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes winner-burst {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+@keyframes winner-halo {
+  0%, 100% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+  50% {
+    transform: scale(1.18);
+    filter: brightness(1.6);
+  }
+}
+
+.animate-touch-ripple {
+  animation: touch-ripple 1.6s cubic-bezier(0.1, 0.7, 0.3, 1) infinite;
+}
+
+.animate-touch-ripple-fast {
+  animation: touch-ripple-fast 0.7s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+
+.animate-touch-rotate {
+  animation: touch-rotate 8s linear infinite;
+}
+
+.animate-winner-burst-1 {
+  animation: winner-burst 1.2s cubic-bezier(0.1, 0.9, 0.2, 1) infinite;
+}
+
+.animate-winner-burst-2 {
+  animation: winner-burst 1.2s cubic-bezier(0.1, 0.9, 0.2, 1) 0.3s infinite;
+}
+
+.animate-winner-burst-3 {
+  animation: winner-burst 1.2s cubic-bezier(0.1, 0.9, 0.2, 1) 0.6s infinite;
+}
+
+.animate-winner-halo {
+  animation: winner-halo 1.1s ease-in-out infinite;
+}
+
+
